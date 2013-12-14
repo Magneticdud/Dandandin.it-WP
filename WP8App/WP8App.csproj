@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{96bd06ec-1605-47c4-932b-de159dd52048}</ProjectGuid>
+    <ProjectGuid>{96BD06EC-1605-47C4-932B-DE159DD52048}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WPAppStudio</RootNamespace>
-    <AssemblyName>WPAppStudio</AssemblyName>
+    <AssemblyName>Dandandin.itWP</AssemblyName>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>
     </SilverlightVersion>
@@ -18,10 +18,10 @@
     </TargetFrameworkProfile>
     <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>en-US</SupportedCultures>
+    <SupportedCultures>it</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>WPAppStudio.xap</XapFilename>
+    <XapFilename>Dandandin.itWP.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>WPAppStudio.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
@@ -359,10 +359,7 @@
       <Name>Repositories</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\Interfaces\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="View\Web_News.xaml" />
     <Page Include="View\Facebook_Detail.xaml" />
@@ -373,6 +370,7 @@
     <Page Include="View\License.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.it.resx" />
     <EmbeddedResource Include="Resources\AppResources.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
