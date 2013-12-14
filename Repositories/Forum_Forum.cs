@@ -33,7 +33,7 @@ namespace WPAppStudio.Repositories
 	    private IServices.IStorageService _storageService;
         private IServices.IInternetService _internetService;
 
-		private const string RssUrl = "http://www.dandandin.it/Forums/RSS.aspx?pageid=2&mid=3";
+        private const string RssUrl = "http://feeds.feedburner.com/dandandin-forum";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Forum_Forum" /> class.
