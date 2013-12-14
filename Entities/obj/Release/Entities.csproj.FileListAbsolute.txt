@@ -1,7 +1,0 @@
-C:\DoWapp\Jobs\289297.towwtv\bin\WPAppStudio.Entities.dll
-C:\DoWapp\Jobs\289297.towwtv\bin\WPAppStudio.Entities.pdb
-C:\DoWapp\Jobs\289297.towwtv\bin\WPAppStudio.Entities.dll.CodeAnalysisLog.xml
-C:\DoWapp\Jobs\289297.towwtv\bin\WPAppStudio.Entities.dll.lastcodeanalysissucceeded
-C:\DoWapp\Jobs\289297.towwtv\src\Entities\obj\Release\Entities.csprojResolveAssemblyReference.cache
-C:\DoWapp\Jobs\289297.towwtv\src\Entities\obj\Release\WPAppStudio.Entities.dll
-C:\DoWapp\Jobs\289297.towwtv\src\Entities\obj\Release\WPAppStudio.Entities.pdb
