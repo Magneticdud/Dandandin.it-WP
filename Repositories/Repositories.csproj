@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{221c50d2-d4f1-4f66-9f20-9885ae8e649a}</ProjectGuid>
+    <ProjectGuid>{221C50D2-D4F1-4F66-9F20-9885AE8E649A}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -97,6 +97,9 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Fakes\FakeForum_Forum.cs" />
+    <Compile Include="Forum_Forum.cs" />
+    <Compile Include="Interfaces\IForum_Forum.cs" />
     <Compile Include="Services\Interfaces\IStorageService.cs" />
     <Compile Include="Services\StorageService.cs" />
     <Compile Include="Services\Interfaces\IInternetService.cs" />
@@ -123,9 +126,7 @@
     <Compile Include="Base\Youtube\YoutubeDataSource.cs" />
     <Compile Include="Base\Youtube\IYoutubeDataSource.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Base\Filter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
