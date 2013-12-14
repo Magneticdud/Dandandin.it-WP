@@ -49,6 +49,14 @@ namespace WPAppStudio.ViewModel.Interfaces
         /// Gets/Sets the SelectedFacebook_NewsListControlCollection property.
         /// </summary>
 		EntitiesBase.RssSearchResult SelectedFacebook_NewsListControlCollection { get; set; }
+        /// <summary>
+        /// Gets/Sets the Forum_NewsListControlCollection property.
+        /// </summary>
+		ObservableCollection<EntitiesBase.RssSearchResult> Forum_NewsListControlCollection { get; set; }
+        /// <summary>
+        /// Gets/Sets the SelectedForum_NewsListControlCollection property.
+        /// </summary>
+		EntitiesBase.RssSearchResult SelectedForum_NewsListControlCollection { get; set; }
         
         /// <summary>
         /// Gets the RefreshWeb_NewsListControlCollectionCommand command.
@@ -84,6 +92,18 @@ namespace WPAppStudio.ViewModel.Interfaces
         /// Gets the GetFacebook_NewsListControlCollectionCommand command.
         /// </summary>
 		ICommand GetFacebook_NewsListControlCollectionCommand { get; }
+
+        
+        /// <summary>
+        /// Gets the RefreshForum_NewsListControlCollectionCommand command.
+        /// </summary>
+		ICommand RefreshForum_NewsListControlCollectionCommand { get; }
+
+        
+        /// <summary>
+        /// Gets the GetForum_NewsListControlCollectionCommand command.
+        /// </summary>
+		ICommand GetForum_NewsListControlCollectionCommand { get; }
 
         
         /// <summary>

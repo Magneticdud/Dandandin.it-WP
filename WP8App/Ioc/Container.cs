@@ -49,6 +49,7 @@ namespace WPAppStudio.Ioc
 			_currentContainer.RegisterType<RepositoriesBase.IXmlDataSource, RepositoriesBase.XmlDataSource>();
 			_currentContainer.RegisterType<RepositoriesBase.IYoutubeDataSource, RepositoriesBase.YoutubeDataSource>();
             _currentContainer.RegisterType<IViewModels.IWeb_NewsViewModel, ViewModels.Web_NewsViewModel>();
+            _currentContainer.RegisterType<IViewModels.IForum_DetailViewModel, ViewModels.Forum_DetailViewModel>();
             _currentContainer.RegisterType<IViewModels.IFacebook_DetailViewModel, ViewModels.Facebook_DetailViewModel>();
             _currentContainer.RegisterType<IViewModels.IYouTube_DetailVideosViewModel, ViewModels.YouTube_DetailVideosViewModel>();
             _currentContainer.RegisterType<IViewModels.IWeb_DetailViewModel, ViewModels.Web_DetailViewModel>();
@@ -61,12 +62,14 @@ namespace WPAppStudio.Ioc
 				_currentContainer.RegisterType<Repositories.IWeb_RSS, Repositories.Web_RSS>(new ContainerControlledLifetimeManager());
 				_currentContainer.RegisterType<Repositories.IYouTube_YouTube, Repositories.YouTube_YouTube>(new ContainerControlledLifetimeManager());
 				_currentContainer.RegisterType<Repositories.IFacebook_Facebook, Repositories.Facebook_Facebook>(new ContainerControlledLifetimeManager());
+				_currentContainer.RegisterType<Repositories.IForum_Forum, Repositories.Forum_Forum>(new ContainerControlledLifetimeManager());
 			}
 			else
 			{
 				_currentContainer.RegisterType<Repositories.IWeb_RSS, Repositories.FakeWeb_RSS>(new ContainerControlledLifetimeManager());
 				_currentContainer.RegisterType<Repositories.IYouTube_YouTube, Repositories.FakeYouTube_YouTube>(new ContainerControlledLifetimeManager());
 				_currentContainer.RegisterType<Repositories.IFacebook_Facebook, Repositories.FakeFacebook_Facebook>(new ContainerControlledLifetimeManager());
+				_currentContainer.RegisterType<Repositories.IForum_Forum, Repositories.FakeForum_Forum>(new ContainerControlledLifetimeManager());
 			
 			}
         }

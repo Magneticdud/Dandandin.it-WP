@@ -285,6 +285,9 @@
     <Compile Include="View\Web_News.xaml.cs">
       <DependentUpon>Web_News.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Forum_Detail.xaml.cs">
+      <DependentUpon>Forum_Detail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Facebook_Detail.xaml.cs">
       <DependentUpon>Facebook_Detail.xaml</DependentUpon>
     </Compile>
@@ -295,10 +298,12 @@
       <DependentUpon>Web_Detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Web_NewsViewModel.cs" />
+    <Compile Include="ViewModel\Forum_DetailViewModel.cs" />
     <Compile Include="ViewModel\Facebook_DetailViewModel.cs" />
     <Compile Include="ViewModel\YouTube_DetailVideosViewModel.cs" />
     <Compile Include="ViewModel\Web_DetailViewModel.cs" />
     <Compile Include="ViewModel\Interfaces\IWeb_NewsViewModel.cs" />
+    <Compile Include="ViewModel\Interfaces\IForum_DetailViewModel.cs" />
     <Compile Include="ViewModel\Interfaces\IFacebook_DetailViewModel.cs" />
     <Compile Include="ViewModel\Interfaces\IYouTube_DetailVideosViewModel.cs" />
     <Compile Include="ViewModel\Interfaces\IWeb_DetailViewModel.cs" />
@@ -359,9 +364,13 @@
       <Name>Repositories</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModel\Interfaces\" />
+    <Folder Include="View\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="View\Web_News.xaml" />
+    <Page Include="View\Forum_Detail.xaml" />
     <Page Include="View\Facebook_Detail.xaml" />
     <Page Include="View\YouTube_DetailVideos.xaml" />
     <Page Include="View\Web_Detail.xaml" />

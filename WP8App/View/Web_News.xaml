@@ -55,6 +55,10 @@
 		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaWeb_News2AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundColor}" Opacity="0.99" ForegroundColor="White">
 			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaWeb_News2RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshFacebook_NewsListControlCollectionCommand}"  />
 		</mytoolkitpaging:BindableApplicationBar>	
+        
+		<mytoolkitpaging:BindableApplicationBar x:Key="PanoramaWeb_News3AppBar" IsVisible="True" IsMenuEnabled="True" Mode="Minimized" BackgroundColor="{StaticResource CustomApplicationAppBarBackgroundColor}" Opacity="0.99" ForegroundColor="White">
+			<mytoolkitpaging:BindableApplicationBarIconButton x:Name="PanoramaWeb_News3RefreshBtn" IconUri="/Images/Icons/Dark/Refresh.png" Text="{Binding Path=LocalizedResources.Refresh, Source={StaticResource LocalizedStrings}}" Command="{Binding RefreshForum_NewsListControlCollectionCommand}"  />
+		</mytoolkitpaging:BindableApplicationBar>	
     </phone:PhoneApplicationPage.Resources>
     <Grid x:Name="LayoutRoot">
 		<Grid.RowDefinitions>
@@ -161,6 +165,37 @@
 					SelectedItem="{Binding SelectedFacebook_NewsListControlCollection, Mode=TwoWay}"
 					PagingEnabled="False"
 					RefreshCommand="{Binding GetFacebook_NewsListControlCollectionCommand}"
+					>
+                    <ctl:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+							<Grid Margin="5" toolkit:TiltEffect.IsTiltEnabled="True">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto"/>
+									<RowDefinition />
+								</Grid.RowDefinitions>
+								<TextBlock TextWrapping="Wrap" FontSize="32" Foreground="{StaticResource CustomApplicationTextBrush}" 
+											Text="{Binding Title, Converter={StaticResource SanitizeString}}" Margin="10,0" Grid.Row="0"/>
+								<TextBlock TextWrapping="Wrap" FontSize="18" Foreground="{StaticResource CustomApplicationTextBrush}"
+										TextTrimming="WordEllipsis" Text="{Binding Summary, Converter={StaticResource SanitizeString}}" MaxHeight="75" Margin="10,0" Grid.Row="1"/>
+							</Grid>
+                        </DataTemplate>
+                    </ctl:LongListSelector.ItemTemplate>
+                </ctl:LongListSelector>
+			</Grid>
+            </phone:PanoramaItem>
+			<phone:PanoramaItem x:Name="PanoramaWeb_News3" Margin="0,0,0,25">
+				<phone:PanoramaItem.Header>
+					<Grid MaxHeight="225" Margin="0,7,0,0">
+						<TextBlock Text="Forum" FontSize="56" TextWrapping="Wrap" TextTrimming="WordEllipsis" Foreground="{StaticResource CustomApplicationTextBrush}"/>
+					</Grid>
+				</phone:PanoramaItem.Header>
+			<Grid>
+				<ProgressBar IsIndeterminate="True" Visibility="{Binding LoadingForum_NewsListControlCollection, Converter={StaticResource VisibilityConverter}}" />
+				<ctl:LongListSelector x:Name="Forum_NewsListControl" 
+					ItemsSource="{Binding Forum_NewsListControlCollection}"
+					SelectedItem="{Binding SelectedForum_NewsListControlCollection, Mode=TwoWay}"
+					PagingEnabled="False"
+					RefreshCommand="{Binding GetForum_NewsListControlCollectionCommand}"
 					>
                     <ctl:LongListSelector.ItemTemplate>
                         <DataTemplate>

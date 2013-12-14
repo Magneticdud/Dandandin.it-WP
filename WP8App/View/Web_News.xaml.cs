@@ -74,6 +74,8 @@ namespace WPAppStudio.View
             YouTube_VideosListControl.SelectedItem = null;
 		
             Facebook_NewsListControl.SelectedItem = null;
+		
+            Forum_NewsListControl.SelectedItem = null;
 		}
     }
 }

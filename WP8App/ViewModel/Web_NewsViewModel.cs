@@ -40,6 +40,7 @@ namespace WPAppStudio.ViewModel
 		private readonly Repositories.IWeb_RSS _web_RSS;
 		private readonly Repositories.IYouTube_YouTube _youTube_YouTube;
 		private readonly Repositories.IFacebook_Facebook _facebook_Facebook;
+		private readonly Repositories.IForum_Forum _forum_Forum;
 		
         /// <summary>
         /// Initializes a new instance of the <see cref="Web_NewsViewModel" /> class.
@@ -50,7 +51,8 @@ namespace WPAppStudio.ViewModel
         /// <param name="web_RSS">The Web_ R S S.</param>
         /// <param name="youTube_YouTube">The You Tube_ You Tube.</param>
         /// <param name="facebook_Facebook">The Facebook_ Facebook.</param>
-        public Web_NewsViewModel(IServices.IDialogService dialogService, IServices.INavigationService navigationService, IServices.ILockScreenService lockScreenService, Repositories.IWeb_RSS web_RSS, Repositories.IYouTube_YouTube youTube_YouTube, Repositories.IFacebook_Facebook facebook_Facebook)
+        /// <param name="forum_Forum">The Forum_ Forum.</param>
+        public Web_NewsViewModel(IServices.IDialogService dialogService, IServices.INavigationService navigationService, IServices.ILockScreenService lockScreenService, Repositories.IWeb_RSS web_RSS, Repositories.IYouTube_YouTube youTube_YouTube, Repositories.IFacebook_Facebook facebook_Facebook, Repositories.IForum_Forum forum_Forum)
         {
 			_dialogService = dialogService;
 			_navigationService = navigationService;
@@ -58,6 +60,7 @@ namespace WPAppStudio.ViewModel
 			_web_RSS = web_RSS;
 			_youTube_YouTube = youTube_YouTube;
 			_facebook_Facebook = facebook_Facebook;
+			_forum_Forum = forum_Forum;
         }
 		
 	
@@ -192,6 +195,45 @@ namespace WPAppStudio.ViewModel
                 _selectedFacebook_NewsListControlCollection = value;
                 if (value != null)
                     _navigationService.NavigateTo<IViewModels.IFacebook_DetailViewModel>(_selectedFacebook_NewsListControlCollection);
+            }
+        }
+	
+		private ObservableCollection<EntitiesBase.RssSearchResult> _forum_NewsListControlCollection;
+
+        /// <summary>
+        /// Forum_NewsListControlCollection property.
+        /// </summary>		
+        public ObservableCollection<EntitiesBase.RssSearchResult> Forum_NewsListControlCollection
+        {
+            get
+            {
+				
+                if(_forum_NewsListControlCollection == null)
+					GetForum_NewsListControlCollectionData();
+				return _forum_NewsListControlCollection;     
+            }
+            set
+            {
+                SetProperty(ref _forum_NewsListControlCollection, value);
+            }
+        }
+	
+		private EntitiesBase.RssSearchResult _selectedForum_NewsListControlCollection;
+
+        /// <summary>
+        /// SelectedForum_NewsListControlCollection property.
+        /// </summary>		
+        public EntitiesBase.RssSearchResult SelectedForum_NewsListControlCollection
+        {
+            get
+            {
+				return _selectedForum_NewsListControlCollection;
+            }
+            set
+            {
+                _selectedForum_NewsListControlCollection = value;
+                if (value != null)
+                    _navigationService.NavigateTo<IViewModels.IForum_DetailViewModel>(_selectedForum_NewsListControlCollection);
             }
         }
 
@@ -383,6 +425,68 @@ namespace WPAppStudio.ViewModel
         }
 
         /// <summary>
+        /// Delegate method for the RefreshForum_NewsListControlCollectionCommand command.
+        /// </summary>
+        public async void RefreshForum_NewsListControlCollectionCommandDelegate() 
+        {
+			try
+			{
+				LoadingForum_NewsListControlCollection = true;
+				var items = await  _forum_Forum.Refresh();
+				Forum_NewsListControlCollection = items;
+			}
+            catch (Exception ex)
+            {
+				Forum_NewsListControlCollection = null;
+		
+                Debug.WriteLine(ex.ToString());
+                _dialogService.Show(Localization.AppResources.rssError + Environment.NewLine + Localization.AppResources.TryAgain);
+            }
+            finally
+            {
+				LoadingForum_NewsListControlCollection = false;
+			}
+        }
+		
+		
+        private bool _loadingForum_NewsListControlCollection;
+		
+        public bool LoadingForum_NewsListControlCollection
+        {
+            get { return _loadingForum_NewsListControlCollection; }
+            set { SetProperty(ref _loadingForum_NewsListControlCollection, value); }
+        }
+
+        private ICommand _refreshForum_NewsListControlCollectionCommand;
+
+        /// <summary>
+        /// Gets the RefreshForum_NewsListControlCollectionCommand command.
+        /// </summary>
+        public ICommand RefreshForum_NewsListControlCollectionCommand
+        {
+            get { return _refreshForum_NewsListControlCollectionCommand = _refreshForum_NewsListControlCollectionCommand ?? new ViewModelsBase.DelegateCommand(RefreshForum_NewsListControlCollectionCommandDelegate); }
+        }
+
+        /// <summary>
+        /// Delegate method for the GetForum_NewsListControlCollectionCommand command.
+        /// </summary>
+        public  void GetForum_NewsListControlCollectionCommandDelegate(int pageNumber= 0) 
+        {
+				GetForum_NewsListControlCollectionData(pageNumber);
+        }
+		
+
+        private ICommand _getForum_NewsListControlCollectionCommand;
+
+        /// <summary>
+        /// Gets the GetForum_NewsListControlCollectionCommand command.
+        /// </summary>
+        public ICommand GetForum_NewsListControlCollectionCommand
+        {
+            get { return _getForum_NewsListControlCollectionCommand = _getForum_NewsListControlCollectionCommand ?? new ViewModelsBase.DelegateCommand<int>(GetForum_NewsListControlCollectionCommandDelegate); }
+        }
+
+        /// <summary>
         /// Delegate method for the SetLockScreenCommand command.
         /// </summary>
         public  void SetLockScreenCommandDelegate() 
@@ -496,6 +600,29 @@ namespace WPAppStudio.ViewModel
             finally
             {
 				LoadingFacebook_NewsListControlCollection = false;
+			}
+		}
+
+        private async void GetForum_NewsListControlCollectionData(int pageNumber = 0)
+        {
+	
+			try
+			{
+				LoadingForum_NewsListControlCollection = true;
+			
+				var items = await _forum_Forum.GetData();
+                Forum_NewsListControlCollection = items;
+			}
+            catch (Exception ex)
+            {
+				Forum_NewsListControlCollection = null;
+		
+                Debug.WriteLine(ex.ToString());
+                _dialogService.Show(Localization.AppResources.rssError + Environment.NewLine + Localization.AppResources.TryAgain);
+            }
+            finally
+            {
+				LoadingForum_NewsListControlCollection = false;
 			}
 		}
     }

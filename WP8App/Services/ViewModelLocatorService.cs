@@ -49,6 +49,14 @@ namespace WPAppStudio.Services
         }
 
         /// <summary>
+        /// Gets the reference to a Forum_DetailViewModel.
+        /// </summary>
+		public IViewModels.IForum_DetailViewModel Forum_DetailViewModel
+        {
+            get { return _container.Resolve<IViewModels.IForum_DetailViewModel>(); }
+        }
+
+        /// <summary>
         /// Gets the reference to a Facebook_DetailViewModel.
         /// </summary>
 		public IViewModels.IFacebook_DetailViewModel Facebook_DetailViewModel
