@@ -114,7 +114,7 @@ namespace WPAppStudio.ViewModel
         /// </summary>
         public  void ShareForum_DetailStaticControlCommandDelegate() 
         {
-				_shareService.Share(CurrentRssSearchResult.Content, CurrentRssSearchResult.PublishDate.ToString(), CurrentRssSearchResult.FeedUrl, "");
+				_shareService.Share(CurrentRssSearchResult.Content, CurrentRssSearchResult.Author, CurrentRssSearchResult.FeedUrl, "");
         }
 		
 
@@ -251,7 +251,7 @@ namespace WPAppStudio.ViewModel
                 CurrentId = CurrentRssSearchResult.Title,
                 Title = CurrentRssSearchResult.Content,
                 BackTitle = CurrentRssSearchResult.Content,
-                BackContent = CurrentRssSearchResult.PublishDate.ToString(),
+                BackContent = CurrentRssSearchResult.Author,
                 Count = 0,
                 BackgroundImagePath = string.Empty,
                 BackBackgroundImagePath = string.Empty,

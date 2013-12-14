@@ -75,7 +75,7 @@
                     <ScrollViewer>
 						<StackPanel>
 							<mytoolkit:FixedHtmlTextBlock FontSize="32" Foreground="{StaticResource CustomApplicationTextBrush}" Html="{Binding CurrentRssSearchResult.Content, Converter={StaticResource SanitizeString}}" />
-							<TextBlock Text="{Binding CurrentRssSearchResult.PublishDate, Converter={StaticResource ShortDateConverter}}" FontSize="24" TextWrapping="Wrap" Foreground="{StaticResource CustomApplicationTextBrush}" />
+							<mytoolkit:FixedHtmlTextBlock FontSize="24" Foreground="{StaticResource CustomApplicationTextBrush}" Html="{Binding CurrentRssSearchResult.Author}" />
 						</StackPanel>
                     </ScrollViewer>
                 </Grid>
