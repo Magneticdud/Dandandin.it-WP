@@ -20,4 +20,5 @@ with your LiveId
 
 For getting more information about advanced options in the Pubcenter AdControl, please follow the next MSDN link: 
 http://msdn.microsoft.com/en-us/library/advertising-mobile-windows-phone-8-adcontrol-visual-designer(v=msads.20).aspx      
-
+
+
