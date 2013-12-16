@@ -33,7 +33,7 @@ namespace WPAppStudio.Repositories
 	    private IServices.IStorageService _storageService;
         private IServices.IInternetService _internetService;
 
-		private const string RssUrl = "http://www.dandandin.it/Blog/RSS.aspx?p=1~2~-1&r=f3a58073-d9c8-496e-af7b-f4ee2ae8dd40";
+        private const string RssUrl = "http://feeds.feedburner.com/Forexperimentations";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Web_RSS" /> class.
@@ -49,7 +49,7 @@ namespace WPAppStudio.Repositories
         }
 
         /// <summary>
-        /// Retrieves the data from a RSS data source (http://www.dandandin.it/Blog/RSS.aspx?p=1~2~-1&r=f3a58073-d9c8-496e-af7b-f4ee2ae8dd40), in an observable collection of RssSearchResult items.
+        /// Retrieves the data from a RSS data source (http://feeds.feedburner.com/Forexperimentations), in an observable collection of RssSearchResult items.
         /// </summary>
         /// <returns>An observable collection of RssSearchResult items.</returns>
         public async Task<ObservableCollection<EntitiesBase.RssSearchResult>> GetData()
@@ -65,7 +65,7 @@ namespace WPAppStudio.Repositories
         }
 
         /// <summary>
-        /// Retrieves the data from a RSS data source (http://www.dandandin.it/Blog/RSS.aspx?p=1~2~-1&r=f3a58073-d9c8-496e-af7b-f4ee2ae8dd40), in an observable collection of RssSearchResult items.
+        /// Retrieves the data from a RSS data source (http://feeds.feedburner.com/Forexperimentations), in an observable collection of RssSearchResult items.
         /// </summary>
         /// <returns>An observable collection of RssSearchResult items.</returns>
         public async Task<ObservableCollection<EntitiesBase.RssSearchResult>> Refresh()
@@ -86,7 +86,7 @@ namespace WPAppStudio.Repositories
         }
 						
 		/// <summary>
-        /// Retrieves the data from a RSS data source (http://www.dandandin.it/Blog/RSS.aspx?p=1~2~-1&r=f3a58073-d9c8-496e-af7b-f4ee2ae8dd40), filtered by a filter specification, in an observable collection of RssSearchResult items.
+        /// Retrieves the data from a RSS data source (http://feeds.feedburner.com/Forexperimentations), filtered by a filter specification, in an observable collection of RssSearchResult items.
         /// </summary>
 		/// <param name="filter">Filter operation specification</param>
         /// <returns>An observable collection of RssSearchResult items.</returns>

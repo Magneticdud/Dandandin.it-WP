@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="it-IT" />
+  <DefaultLanguage xmlns="" code="en" />
   <Languages xmlns="">
-    <Language code="it" />
+    <Language code="en" />
   </Languages>
-  <App xmlns="" ProductID="{a39b6036-74f2-448a-87c3-9a0df799de14}" Title="Dandandin.it" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Dandandin.it" Description="Tutto Dandandin.it sul tuo Windows Phone!" Publisher="" PublisherID="{e7d94c95-4681-45a0-a8b4-5df4e482fb9e}">
+  <App xmlns="" ProductID="{dfe12174-963d-429f-ac9a-b67ef93b88f8}" Title="Forexperiments.com" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Dandandin.it" Description="Get Forexperiments on your Windows Phone!" Publisher="" PublisherID="{e7d94c95-4681-45a0-a8b4-5df4e482fb9e}">
     <IconPath IsRelative="true" IsResource="false">Images\Logo-e5fdb3ff-dfbe-482b-8e55-b7902363885e.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -22,7 +22,7 @@
           <SmallImageURI IsRelative="true" IsResource="false">Images/Logo-e5fdb3ff-dfbe-482b-8e55-b7902363885e.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Images/Logo-e5fdb3ff-dfbe-482b-8e55-b7902363885e.png</BackgroundImageURI>
-          <Title>Dandandin.it</Title>
+          <Title>Forexperiments.com</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI IsRelative="true" IsResource="false">Images/TileBackBackground.png</BackBackgroundImageURI>

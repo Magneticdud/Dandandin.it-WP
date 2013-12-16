@@ -21,7 +21,7 @@
     <SupportedCultures>it</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>Dandandin.itWP.xap</XapFilename>
+    <XapFilename>ForexperimentsWP.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>WPAppStudio.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>

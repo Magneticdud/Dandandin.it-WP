@@ -5,11 +5,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values ​​to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WPAppStudio")]
+[assembly: AssemblyTitle("Forexperiments")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WPAppStudio")]
+[assembly: AssemblyProduct("Forexperiments")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ced4cb1f-d5ab-424c-9931-95564f6c97de")]
+[assembly: Guid("b65f3ea4-948d-40c5-b98d-0db06eb8a6d3")]
 
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

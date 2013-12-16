@@ -35,7 +35,7 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
     <phone:PhoneApplicationPage.Resources>
-	    <Style x:Key="ShareButtonStyle" TargetType="Button">
+        <Style x:Key="ShareButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="{StaticResource CustomApplicationTextBrush}"/>
             <Setter Property="Foreground" Value="{StaticResource CustomApplicationTextBrush}"/>
@@ -89,24 +89,27 @@
         </Style>
     </phone:PhoneApplicationPage.Resources>
     <Grid x:Name="LayoutRoot" Background="{StaticResource CustomApplicationBackgroundBrush}">
-		<Grid.RowDefinitions>
+        <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="21,17,0,28">
-            <TextBlock Text="{Binding Title}" FontSize="20" />
+            <TextBlock Text="Forexperiments.com" FontSize="20" />
             <TextBlock Text="About" FontSize="72" />
         </StackPanel>
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="21,0,12,0">
-			<ScrollViewer>
-				<StackPanel>
-					<TextBlock Text="{Binding Description}" TextWrapping="Wrap"/>
-					<TextBlock Text="{Binding Version}" TextWrapping="Wrap" Margin="0, 25"/>
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock TextWrapping="Wrap">
+						<Run Text="Get Forexperiments.com on your "/>
+						<Run Text="Windows Phone!"/>
+                    </TextBlock>
+                    <TextBlock Text="{Binding Version}" TextWrapping="Wrap" Margin="0, 25"/>
                     <HyperlinkButton Content="Third Parties license terms" Foreground="{StaticResource CustomApplicationTextBrush}" Command="{Binding LicenseCommand}"/>
-					<Button Content="{Binding Path=LocalizedResources.ShareApp, Source={StaticResource LocalizedStrings}}" Command="{Binding ShareAppCommand}" 
+                    <Button Content="{Binding Path=LocalizedResources.ShareApp, Source={StaticResource LocalizedStrings}}" Command="{Binding ShareAppCommand}" 
 							Style="{StaticResource ShareButtonStyle}"/>
-				</StackPanel>
-			</ScrollViewer>
-		</Grid>
-	</Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
 </phone:PhoneApplicationPage>

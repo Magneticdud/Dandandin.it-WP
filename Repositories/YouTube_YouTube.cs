@@ -34,7 +34,7 @@ namespace WPAppStudio.Repositories
 		private const int MaxResults = 10;
 		
 		private const string YoutubeBaseUrl = "https://gdata.youtube.com/feeds/api/users/{0}/uploads?v=2";
-		private const string YoutubeQuery = @"Magneticdud";
+        private const string YoutubeQuery = @"Forexperiments";
 		private const string YoutubePaginationParameters = "&start-index={1}&max-results={2}";
 
         /// <summary>

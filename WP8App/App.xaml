@@ -32,7 +32,7 @@
 		<!-- Resources -->
         <Color x:Key="CustomApplicationAppBarBackgroundColor">#212021</Color>                
 
-		<SolidColorBrush x:Key="CustomTitleApplicationTextBrush" Color="#fa6800" />
+		<SolidColorBrush x:Key="CustomTitleApplicationTextBrush" Color="#FF0032FA" />
 		<SolidColorBrush x:Key="CustomApplicationTextBrush" Color="#ffffff" />
 		<SolidColorBrush x:Key="CustomApplicationBackgroundBrush" Color="#000" />
 		<SolidColorBrush x:Key="CustomApplicationAppBarBackgroundBrush" Color="{StaticResource CustomApplicationAppBarBackgroundColor}"/>

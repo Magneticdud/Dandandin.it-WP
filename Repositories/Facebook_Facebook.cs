@@ -33,7 +33,7 @@ namespace WPAppStudio.Repositories
 	    private IServices.IStorageService _storageService;
         private IServices.IInternetService _internetService;
 
-		private const string RssUrl = "https://www.facebook.com/feeds/page.php?format=rss20&id=125252329504";
+        private const string RssUrl = "https://www.facebook.com/feeds/page.php?format=rss20&id=517946014910360";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Facebook_Facebook" /> class.
@@ -49,7 +49,7 @@ namespace WPAppStudio.Repositories
         }
 
         /// <summary>
-        /// Retrieves the data from a RSS data source (https://www.facebook.com/feeds/page.php?format=rss20&id=125252329504), in an observable collection of RssSearchResult items.
+        /// Retrieves the data from a RSS data source (https://www.facebook.com/feeds/page.php?format=rss20&id=517946014910360), in an observable collection of RssSearchResult items.
         /// </summary>
         /// <returns>An observable collection of RssSearchResult items.</returns>
         public async Task<ObservableCollection<EntitiesBase.RssSearchResult>> GetData()
@@ -65,7 +65,7 @@ namespace WPAppStudio.Repositories
         }
 
         /// <summary>
-        /// Retrieves the data from a RSS data source (https://www.facebook.com/feeds/page.php?format=rss20&id=125252329504), in an observable collection of RssSearchResult items.
+        /// Retrieves the data from a RSS data source (https://www.facebook.com/feeds/page.php?format=rss20&id=517946014910360), in an observable collection of RssSearchResult items.
         /// </summary>
         /// <returns>An observable collection of RssSearchResult items.</returns>
         public async Task<ObservableCollection<EntitiesBase.RssSearchResult>> Refresh()
